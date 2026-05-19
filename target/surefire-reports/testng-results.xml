@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-18T21:42:57 BOT" name="Surefire suite" finished-at="2026-05-18T21:43:51 BOT" duration-ms="54016">
+    <groups>
+    </groups>
+    <test started-at="2026-05-18T21:42:57 BOT" name="Surefire test" finished-at="2026-05-18T21:43:51 BOT" duration-ms="54016">
+      <class name="BecasUCBTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:BecasUCBTest@6a472554]" started-at="2026-05-18T21:42:57 BOT" name="setUp" finished-at="2026-05-18T21:43:42 BOT" duration-ms="44801" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="ingresarASeccionBecasTest()[pri:0, instance:BecasUCBTest@6a472554]" started-at="2026-05-18T21:43:42 BOT" name="ingresarASeccionBecasTest" finished-at="2026-05-18T21:43:50 BOT" duration-ms="8158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ingresarASeccionBecasTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:BecasUCBTest@6a472554]" started-at="2026-05-18T21:43:50 BOT" name="tearDown" finished-at="2026-05-18T21:43:51 BOT" duration-ms="952" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- BecasUCBTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

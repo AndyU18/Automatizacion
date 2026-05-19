@@ -1,4 +1,5 @@
 import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
@@ -9,6 +10,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import java.nio.file.Paths;
 
 /****************************************/
 //Historia de Usuario:
@@ -36,6 +39,7 @@ public class BecasUCBTest {
 
     private Playwright playwright;
     private Browser browser;
+    private BrowserContext context;
     private Page page;
 
     @BeforeTest
@@ -49,7 +53,12 @@ public class BecasUCBTest {
                         .setSlowMo(700)
         );
 
-        page = browser.newPage();
+        // Configurar grabación de video al escritorio
+        String desktopPath = System.getProperty("user.home") + "/Desktop";
+        context = browser.newContext(new Browser.NewContextOptions()
+                .setRecordVideoDir(Paths.get(desktopPath)));
+
+        page = context.newPage();
     }
 
     @Test
@@ -106,6 +115,10 @@ public class BecasUCBTest {
 
         if (page != null) {
             page.close();
+        }
+
+        if (context != null) {
+            context.close();
         }
 
         if (browser != null) {
